@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url"                content="https://justtfelix.github.io/Unilab-Project/" />
+    <meta property="og:type"               content="Article" />
+    <meta property="og:title"              content="Unilab Project" />
+    <meta property="og:description"        content="Unilab's first stage assignment" />
+    <meta property="og:image"              content="https://justtfelix.github.io/Unilab-Project/images/travel.svg" />
+    <meta name="keywords" content="Travel, Unilab Project, HTML, CSS, SASS, SCSS, JavaScript">
+    <meta name="author" content="justtfelix">
+    <script src="https://kit.fontawesome.com/f235961b72.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/gif" href="./images/earth-icon.png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <title>Products</title>
+  </head>
+  <body onload="realTimeClock()">
+    <header>
+      <div class="background"></div>
+      <div class="mobile-header">
+        <div class="top-block">
+          <div id="clock"></div>
+          <div class="networks-box">
+            <img src="./images/signal.svg" class="network-img" alt="Signal">
+            <img src="./images/wifi.svg" class="network-img" alt="Wifi">
+            <img src="./images/battery.svg" class="network-img" alt="Battery">
+          </div>
+        </div>
+        <div class="bottom-block">
+          <div class="burger-menu">
+            <span class="line"></span>    
+            <span class="line"></span>    
+            <span class="line"></span>
+          </div>
+          <a href="index.html">
+            <h1 class="grey-logo">logo</h1>
+          </a>
+          <img src="./images/girl-avatar.svg" class="girl-avatar" alt="User">
+        </div>
+      </div>
+      <div class="header-container">
+        <a href="index.html">
+          <h1 class="pink-logo">logo</h1>
+        </a>
+        <div class="flex-box">
+          <nav>
+            <ul>
+              <li>
+                <img src="./images/home.svg" class="link-img" alt="Home">
+                <a href="index.html" class="nav-link opacity">home</a>
+              </li>
+              <li>
+                <img src="./images/discover.svg" class="link-img opacity-img" alt="Products">
+                <a href="product.html" class="nav-link">products</a>
+              </li>
+              <li>
+                <img src="./images/photos.svg" class="link-img opacity-img" alt="Photos">
+                <a href="#" class="nav-link opacity">photos</a>
+              </li>
+              <li>
+                <img src="./images/mail.svg" class="link-img opacity-img" alt="Mail">
+                <a href="#" class="nav-link opacity">contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-box">
+            <img src="./images/user.svg" class="user-img" alt="User">
+            <a href="#" class="nav-link opacity">profile</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="bg-color">
+      <div class="container">
+        <h1 class="head-title">products</h1>
+        <div id="cards">
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="flex-block">
+          <div class="left-box">
+            <a href="index.html" class="footer-logo">logo</a>
+            <div class="links-box">
+              <div class="links">
+                <a href="#">home</a>
+                <a href="#">discovery</a>
+                <a href="#">photos</a>
+                <a href="#">contact</a>
+              </div>
+              <div class="links">
+                <a href="#">about</a>
+                <a href="#">help</a>
+                <a href="#">terms</a>
+                <a href="#">guidlines</a>
+              </div>
+              <div class="links">
+                <a href="#">testimonials</a>
+                <a href="#">advertise</a>
+                <a href="#">integrations</a>
+                <a href="#">careers</a>
+              </div>
+            </div>
+          </div>
+          <div class="right-box">
+            <div class="input-box">
+              <form>
+                <input type="email" class="input-field" placeholder="email" required>
+                <button class="btn" type="submit">
+                  <i class="fa-solid fa-paper-plane send-icon"></i>
+                </button>
+              </form>
+              <p>Stay in touch with us for the freshest products!</p>
+            </div>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-instagram soc-icon"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fa-brands fa-twitter soc-icon"></i>
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <i class="fa-brands fa-facebook-f soc-icon"></i>
+              </a>
+              <a href="https://www.world.com/" target="_blank">
+                <i class="fa-solid fa-earth-americas soc-icon"></i>
+              </a>          
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/burger-menu.js"></script>
+    <script src="./js/fetch-api.js"></script>
+    <script src="./js/clock.js"></script>
+  </body>
+</html>

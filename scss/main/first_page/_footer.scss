@@ -1,0 +1,202 @@
+@import "../../modules/variables";
+@import "../../modules/classes";
+@import "../../modules/mixins";
+@import "../breakpoints";
+
+footer {
+  background-color: $grey3;
+  padding: 60px 0;
+  @include responsive(phone-land-sm) {
+    padding: 50px 0;
+  }
+  @include responsive(phone-port-sm) {
+    padding: 30px 0 40px 0;
+  }
+  .container {
+    @extend %container;
+    @include responsive(desktop) {
+      padding: 0 60px;
+    }
+    @include responsive(phone-land-sm) {
+      padding: 0 25px;
+    }
+    @include responsive(phone-port-md) {
+      padding: 0 50px; 
+    }
+    .flex-block {
+      @include display(flex);
+      justify-content: space-between;
+      @include responsive(tablet-lg) {
+        flex-direction: column;
+      }
+      .left-box {
+        @include display(flex);
+        @include responsive(tablet-lg) {
+          width: 100%;
+          justify-content: space-between;
+        }
+        .footer-logo {
+          @include text-property(13px, $roboto, $white, $upper);
+          font-weight: $bold;
+          line-height: 20px;
+          @include responsive(phone-land-sm) {
+            display: none;
+          }
+        }
+        .links-box {
+          @include display(flex);
+          margin-left: 60px;
+          @include responsive(tablet-lg) {
+            margin-left: 0;
+          }
+          @include responsive(phone-land-sm) {
+            width: 100%;
+            justify-content: space-around;
+          }
+          @include responsive(phone-port-md) {
+            justify-content: space-between;
+          }
+          .links {
+            @include display(flex);
+            flex-direction: column;
+            &:first-child {
+              @include responsive(phone-port-md) {
+                display: none;
+              }
+            }
+            &:nth-child(2) {
+              margin: 0 40px;
+              @include responsive(phone-land-sm) {
+                margin: 0 0;
+              }
+            }
+            a {
+              @include text-property(13px, $roboto, $grey4, $capit);
+              font-weight: $bold;
+              line-height: 20px;
+              @include transition(all, 350ms, ease);
+              &:hover {
+                color: $grey1;
+              }
+              @include responsive(phone-land-sm) {
+                text-transform: $upper;
+                line-height: 40px;
+                color: $white;
+                opacity: 50%;
+                &:hover {
+                  opacity: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .right-box {
+        @include display(flex);
+        @include responsive(tablet-lg) {
+          width: 100%;
+          @include flex-property(space-between, flex-end);
+          margin-top: 50px;
+        }
+        @include responsive(phone-land-sm) {
+          justify-content: center;
+        }
+        @include responsive(phone-port-md) {
+          justify-content: flex-start;
+        }
+        @include responsive(phone-port-sm) {
+          margin-top: 30px;
+        }
+        .input-box {
+          @include responsive(phone-land-sm) {
+            display: none;
+          }
+          form {
+            position: relative;
+            .input-field {
+              width: 260px;
+              height: 40px;
+              @include border(2px, solid, $white);
+              @include text-property(13px, $roboto, $grey1, none);
+              border-radius: 6px;
+              background-color: transparent;
+              opacity: 20%;
+              padding: 0 20px;
+              outline: none;
+              cursor: text;
+              @include transition(all, 300ms, ease);
+              &::placeholder {
+                @include text-property(13px, $roboto, $grey1, $capit);
+                font-weight: $regular;
+              }
+              &:hover, &:focus {
+                opacity: 50%;
+              }
+            }
+            .btn {
+              background-color: transparent;
+              cursor: pointer;
+              border: none;
+              outline: none;
+              position: absolute;
+              top: 50%;
+              right: 20px;
+              transform: translateY(-50%);
+              .send-icon {
+                color: $white;
+                font-size: 16px;
+              }
+            }
+          }
+          p {
+            @include text-property(11px, $roboto, $grey4, none);
+            font-weight: $regular;
+            margin-top: 17px;
+          }
+        }
+        .social-icons {
+          margin-left: 120px;
+          @include responsive(desktop) {
+            margin-left: 60px;
+          }
+          @include responsive(tablet-lg) {
+            margin-left: 0;
+          }
+          a {
+            margin-right: 32px;
+            @include responsive(desktop) {
+              margin-right: 20px;
+            }
+            @include responsive(tablet-lg) {
+              margin-right: 25px;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+            .soc-icon {
+              font-size: 20px;
+              color: $white;
+              @include transition(all, 350ms, ease);
+            }
+            // Social icon's hover effects
+            .fa-instagram:hover {
+              background: -o-linear-gradient(45deg, #FEDA77 0%, #F58529 25%, #DD2A7B 50%, #8134AF 75%, #8134AF 100%);
+              background: linear-gradient(45deg, #FEDA77 0%, #F58529 25%, #DD2A7B 50%, #8134AF 75%, #8134AF 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            .fa-twitter:hover {
+              color: $twitterColor;
+            }
+            .fa-facebook-f:hover {
+              color: $facebookColor;
+            }
+            .fa-earth-americas:hover {
+              color: $pink;
+            }
+          }
+        }
+      }
+    }
+  }
+}

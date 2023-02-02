@@ -1,0 +1,25 @@
+{
+  "name": "unilab-project",
+  "version": "1.0.0",
+  "description": "First Stage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justtfelix/Unilab-Project.git"
+  },
+  "author": "justtfelix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justtfelix/Unilab-Project/issues"
+  },
+  "homepage": "https://github.com/justtfelix/Unilab-Project#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-watch": "^5.0.1",
+    "sass": "^1.52.3"
+  }
+}

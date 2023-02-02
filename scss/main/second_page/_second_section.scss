@@ -1,0 +1,202 @@
+@import "../../modules/variables";
+@import "../../modules/classes";
+@import "../../modules/mixins";
+@import "../breakpoints";
+
+.bg-color {
+  .container {
+    @extend %container;
+    .common-block {
+      @include display(flex);
+      @include responsive(tablet-lg) {
+        flex-direction: column;
+      }
+      .left-box {
+        @include size(580px, 100%, 500px);
+        @include bg-img(cover, center, no-repeat);
+        border-radius: 6px 0 0 6px;
+        position: relative;
+        @include responsive(tablet-lg) {
+          max-width: 100%;
+          height: 450px;
+          border-radius: 6px 6px 0 0;
+        }
+        @include responsive(tablet) {
+          height: 400px;
+        }
+        @include responsive(phone-land-sm) {
+          height: 375px;
+          border-radius: 0;
+        }
+        @include responsive(phone-port-sm) {
+          height: 340px;
+        }
+        .text-content {
+          max-width: 350px;
+          width: 100%;
+          @extend %center;
+          @include responsive(phone-port-md) {
+            max-width: 300px;
+          }
+          @include responsive(phone-port-sm) {
+            max-width: 260px;
+          }
+          h2 {
+            @include text-property(32px, $roboto, $white, $upper);
+            font-weight: $bold;
+            line-height: 42px;
+            text-align: center;
+            margin-bottom: 35px;
+            @include responsive(phone-port-sm) {
+              font-size: 30px;
+              line-height: 25px;
+            }
+            &::after {
+              content: "";
+              display: block;
+              width: 40px;
+              height: 2px;
+              background-color: $pink;
+              border-radius: 2px;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              margin-top: 10px;
+              @include responsive(phone-port-sm) {
+                margin-top: 17px;
+              }
+            }
+          }
+          p {
+            @include text-property(16px, $roboto, $white, none);
+            font-weight: $bold;
+            line-height: 22px;
+            text-align: center;
+            margin: 20px 0 40px 0;
+            @include responsive(phone-port-sm) {
+              font-size: 14px;
+              margin-bottom: 30px;
+            }
+          }
+          .avatar-box {
+            width: 40px;
+            height: 40px;
+            @include border(2px, solid, $white);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); 
+            .avatar {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .right-box {
+        max-width: 580px;
+        width: 100%;
+        background-color: $white;
+        border-radius: 0 6px 6px 0;
+        position: relative;
+        @include responsive(tablet-lg) {
+          max-width: 100%;
+          height: 400px;
+          @include display(flex);
+          @include flex-property(center, center);
+          border-radius: 0 0 6px 6px;
+          padding: 0 80px; 
+        }
+        @include responsive(phone-land-sm) {
+          height: 325px;
+          padding: 0 25px;
+        }
+        @include responsive(phone-port-sm) {
+          height: 280px;
+          padding: 0 16px;
+        }
+        .form {
+          max-width: 350px;
+          width: 100%;
+          @include display(flex);
+          flex-direction: column;
+          @extend %center;
+          @include responsive(tablet-lg) {
+            max-width: 100%;
+            position: inherit !important;
+            top: 0 !important;
+            left: 0 !important;
+            transform: translate(0, 0) !important;
+          }
+          .label {
+            @include text-property(13px, $roboto, $black, none);
+            font-weight: $bold;
+            margin-bottom: 10px;
+            @include responsive(phone-port-sm) {
+              margin-bottom: 7px;
+            }
+          }
+          .form-field {
+            width: 100%;
+            height: 40px;
+            background-color: transparent;
+            @include border(2px, solid, $grey1);
+            border-radius: 6px;
+            margin-bottom: 40px;
+            padding-left: 15px;
+            outline: none;
+            cursor: pointer;
+            @include text-property(13px, $roboto, $grey3, $capit);
+            @include transition(all, 300ms, ease);
+            &:hover, &:focus {
+              border-color: $grey3;
+            }
+            @include responsive(tablet) {
+              margin-bottom: 30px;
+            }
+            @include responsive(phone-port-sm) {
+              height: 37px;
+              margin-bottom: 25px; 
+            }
+          }
+          .cursor-text {
+            cursor: text;
+          }
+          .search-btn {
+            @extend %pinkBtn;
+            cursor: pointer;
+            @include text-property(11px, $roboto, $white, $upper);
+            font-weight: $bold;
+            letter-spacing: 1px;
+            @include responsive(tablet) {
+              display: none;
+            }
+            @include responsive(phone-land-sm) {
+              display: block;
+              width: 150px !important;
+            }
+            @include responsive(phone-port-sm) {
+              width: 140px !important;
+              height: 37px !important;
+            }
+            &:last-child {
+              width: 150px;
+              display: none;
+              @include responsive(tablet) {
+                display: block;
+              }
+              @include responsive(phone-land-sm) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .full-screen {
+    @include responsive(phone-land-sm) {
+      padding: 0;
+    }
+  }
+}

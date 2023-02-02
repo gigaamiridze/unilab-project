@@ -1,0 +1,85 @@
+@import "./variables";
+@import "./mixins";
+@import "../main/breakpoints";
+
+%container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+%underline {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+}
+
+%line {
+  width: 100%;
+  height: 2px;
+  background-color: $grey1;
+  border-radius: 2px;
+}
+
+%center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%title {
+  @include text-property(24px, $roboto, $black, $upper);
+  font-weight: $bold;
+  line-height: 20px;
+}
+
+%arrowIcon {
+  font-size: 15px;
+  cursor: pointer;
+  &:first-child {
+    color: #707070;
+    margin-right: 40px;
+  }
+}
+
+%timerDiv {
+  @include display(flex);
+  align-items: center;
+}
+
+%timerIcon {
+  font-size: 17px;
+  color: $grey3; 
+  margin-right: 10px;
+}
+
+%timeAgo {
+  @include text-property(13px, $roboto, $grey3, none);
+}
+
+%pinkBtn {
+  position: relative;
+  width: 134px;
+  height: 40px;
+  background-color: $pink;
+  border: none;
+  border-radius: 6px;
+  @include transition(all, 400ms, ease);
+  &:hover {
+    background-color: $dark-pink;
+  }
+}
+
+%pinkLine {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $pink;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

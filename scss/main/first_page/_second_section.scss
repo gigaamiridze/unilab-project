@@ -1,0 +1,148 @@
+@import "../../modules/variables";
+@import "../../modules/classes";
+@import "../../modules/mixins";
+@import "../breakpoints";
+
+.add-padd {
+  padding: 40px 0;
+  @include responsive(phone-port-sm) {
+    padding: 30px 0;
+  }
+}
+.bg-color {
+  background-color: $grey;
+  .container {
+    @extend %container;
+    @include responsive(desktop) {
+      padding: 0 60px; 
+    }
+    @include responsive(phone-land-sm) {
+      padding: 0 25px;
+    }
+    @include responsive(phone-port-sm) {
+      padding: 0 16px;
+    }
+    .horizontal-block {
+      @include display(flex);
+      @include flex-property(space-between, center);
+      margin-bottom: 30px;
+      @include responsive(phone-port-sm) {
+        margin-bottom: 20px;
+      }
+      h2 {
+        @extend %title;
+        @include responsive(phone-port-sm) {
+          font-size: 22px !important;
+        }
+      }
+      .icons-box {
+        .arrow-icon {
+          @extend %arrowIcon;
+          @include responsive(phone-port-sm) {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+    .flex-block-1 {
+      @include display(flex);
+      @include responsive(phone-land-sm) {
+        flex-direction: column;
+      }
+      .image-and-info {
+        max-width: 374px;
+        width: 100%;
+        @include responsive(phone-land-sm) {
+          max-width: 100%;
+        }
+        &:nth-child(2) {
+          margin: 0 20px;
+          @include responsive(tablet) {
+            margin: 0 0 0 40px;
+          }
+          @include responsive(phone-land-sm) {
+            margin: 40px 0 0 0;
+          }
+          @include responsive(phone-port-sm) {
+            margin-top: 20px;
+          }
+        }
+        &:last-child {
+          @include responsive(tablet) {
+            display: none;
+          }
+        }
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+        .white-box {
+          background-color: $white;
+          border-bottom-left-radius: 6px;
+          border-bottom-right-radius: 6px;
+          margin-top: -3px;
+          @include display(flex);
+          @include flex-property(center, center);
+          @include responsive(desktop) {
+            padding: 0 20px;
+          }
+          @include responsive(tablet) {
+            padding: 0 40px;
+          }
+          @include responsive(phone-land-md) {
+            padding: 0 25px;
+          }
+          @include responsive(phone-land-sm) {
+            justify-content: inherit;
+          }
+          @include responsive(phone-port-sm) {
+            padding: 0 20px;
+          }
+          .info-box {
+            max-width: 280px;
+            width: 100%;
+            padding: 40px 0;
+            @include responsive(phone-land-md) {
+              padding: 30px 0; 
+            }
+            @include responsive(phone-land-sm) {
+              max-width: 310px;
+            }
+            @include responsive(phone-port-sm) {
+              padding: 20px 0;
+            }
+            h6 {
+              @include text-property(16px, $roboto, $black, none);
+              font-weight: $bold;
+              line-height: 20px;
+              @include responsive(phone-port-sm) {
+                font-size: 15px;
+              }
+            }
+            p {
+              @include text-property(13px, $roboto, $grey3, none);
+              font-weight: $regular;
+              line-height: 20px;
+              margin: 5px 0 10px 0;
+              @include responsive(phone-land-sm) {
+                font-size: 14px;
+              }
+              @include responsive(phone-port-sm) {
+                font-size: 13px;
+              }
+            }
+            .time {
+              @extend %timerDiv;
+              .bx-time-five {
+                @extend %timerIcon;
+              }
+              span {
+                @extend %timeAgo;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

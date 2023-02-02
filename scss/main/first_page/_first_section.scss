@@ -1,0 +1,257 @@
+@import "../../modules/variables";
+@import "../../modules/classes";
+@import "../../modules/mixins";
+@import "../breakpoints";
+
+.first-section {
+  position: relative;
+  height: 92vh;
+  @include responsive(tablet-lg) {
+    height: 135vh;
+  }
+  @include responsive(tablet) {
+    height: 125vh;
+  }
+  @include responsive(phone-land-sm) {
+    height: 142vh;
+  }
+  @include responsive(phone-port-lg) {
+    height: 136vh;
+  }
+  @include responsive(phone-port-sm) {
+    height: 124vh;
+  }
+  .nature-img {
+    @include size(770px, 100%, 100%);
+    object-fit: cover;
+    filter: brightness(80%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include responsive(desktop) {
+      max-width: 520px;
+    }
+    @include responsive(tablet-lg) {
+      max-width: 100%;
+      height: 450px;
+    }
+    @include responsive(tablet) {
+      height: 400px;
+    }
+    @include responsive(phone-land-sm) {
+      height: 375px;
+    }
+    @include responsive(phone-port-sm) {
+      height: 340px;
+    }
+  }
+  .full-height {
+    height: 100%; 
+  }
+  .container {
+    @extend %container;
+    @include responsive(desktop) {
+      padding: 0 60px; 
+    }
+    @include responsive(phone-land-sm) {
+      padding: 0 25px;
+    }
+    @include responsive(phone-port-sm) {
+      padding: 0 16px;
+    }
+    .flex-block {
+      @include display(flex);
+      @include flex-property(space-between, center);
+      @include responsive(tablet-lg) {
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .world-news-content {
+        max-width: 490px;
+        width: 100%;
+        z-index: 1;
+        @include responsive(desktop) {
+          max-width: 400px;
+        }
+        @include responsive(tablet-lg) {
+          max-width: 100%;
+        }
+        h2 {
+          @include text-property(24px, $roboto, $white, $upper);
+          font-weight: $bold;
+          line-height: 42px;
+          @include responsive(phone-land-sm) {
+            line-height: 20px;
+          }
+          @include responsive(phone-port-sm) {
+            font-size: 22px;
+          }
+          &::after {
+            @extend %underline;
+            background-color: $white;
+            margin: 20px 0 30px 0;
+            @include responsive(phone-land-sm) {
+              margin-top: 30px;
+            }
+            @include responsive(phone-port-sm) {
+              margin: 25px 0 20px 0;
+            }
+          }
+        }
+        h4 {
+          @include text-property(24px, $roboto, $white, none);
+          font-weight: $bold;
+          line-height: 34px;
+          @include responsive(phone-port-sm) {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+        p {
+          @include text-property(16px, $roboto, $white, none);
+          line-height: 25px;
+          margin-bottom: 25px;
+          @include responsive(phone-land-sm) {
+            margin: 25px 0 15px 0;
+          }
+          @include responsive(phone-port-sm) {
+            font-size: 14px;
+            line-height: 22px;
+            margin: 15px 0 10px 0;
+          }
+        }
+        .learn-more {
+          @extend %pinkBtn;
+          @include responsive(phone-land-sm) {
+            width: 150px !important;
+          }
+          @include responsive(phone-port-sm) {
+            width: 140px !important;
+            height: 35px !important;
+          }
+          .learn-link {
+            @include text-property(11px, $roboto, $white, $upper);
+            font-weight: $bold;
+            letter-spacing: 1px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include display(flex);
+            @include flex-property(center, center);
+          }
+        }
+      }
+      .more-news-content {
+        max-width: 360px;
+        width: 100%;
+        z-index: 1;
+        @include responsive(tablet-lg) {
+          max-width: 100%;
+        }
+        .top-box {
+          @include display(flex);
+          justify-content: space-between;
+          @include responsive(phone-port-sm) {
+            align-items: center;
+          }
+          h2 {
+            @extend %title;
+            @include responsive(phone-port-sm) {
+              font-size: 22px !important;
+            }
+          }
+          .icons-box {
+            .arrow-icon {
+              @extend %arrowIcon;
+              @include responsive(phone-port-sm) {
+                font-size: 14px !important;
+              }
+            }
+          }
+        }
+        .underline {
+          @extend %underline;
+          background-color: $grey1;
+          margin: 35px 0 35px 0;
+          @include responsive(phone-port-sm) {
+            margin: 30px 0 30px 0;
+          }
+        }
+        .bottom-box {
+          @include responsive(tablet-lg) {
+            @include display(flex);
+            justify-content: space-between;
+          }
+          @include responsive(phone-land-sm) {
+            flex-direction: column;
+          }
+          .article-box {
+            @include responsive(tablet-lg) {
+              max-width: 300px;
+            }
+            @include responsive(tablet) {
+              max-width: 280px;
+            }
+            @include responsive(phone-land-sm) {
+              max-width: 350px;
+            }
+            &:first-child {
+              margin-bottom: 40px;
+              @include responsive(tablet-lg) {
+                margin-bottom: 0;
+              }
+              @include responsive(phone-land-sm) {
+                margin-bottom: 40px;
+              }
+              @include responsive(phone-port-sm) {
+                margin-bottom: 30px;
+              }
+            }
+            h5 {
+              @include text-property(16px, $roboto, $pink, $capit);
+              font-weight: $bold;
+              line-height: 20px;
+              @include responsive(tablet) {
+                text-transform: $upper;
+              }
+              @include responsive(phone-port-sm) {
+                font-size: 15px;
+              }
+            }
+            h6 {
+              @include text-property(16px, $roboto, $black, none);
+              font-weight: $bold;
+              line-height: 20px;
+              margin-top: 10px;
+              @include responsive(phone-port-sm) {
+                font-size: 15px;
+                margin-top: 5px;
+              }
+            }
+            p {
+              @include text-property(16px, $roboto, $grey3, none);
+              line-height: 25px;
+              margin-bottom: 10px;
+              @include responsive(phone-port-sm) {
+                font-size: 14px;
+                line-height: 22px;
+                margin-bottom: 5px;
+              }
+            }
+            .time {
+              @extend %timerDiv;
+              .bx-time-five {
+                @extend %timerIcon;
+              }
+              span {
+                @extend %timeAgo;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

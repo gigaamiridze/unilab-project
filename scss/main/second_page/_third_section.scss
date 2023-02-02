@@ -1,0 +1,116 @@
+@import "../../modules/variables";
+@import "../../modules/classes";
+@import "../../modules/mixins";
+@import "../breakpoints";
+
+.bg-color {
+  .container {
+    @extend %container;
+    .underline {
+      @extend %line;
+      &:first-child {
+        margin-bottom: 40px;
+        @include responsive(phone-port-sm) {
+          margin-bottom: 25px;
+        }
+      }
+      &:last-child {
+        margin-top: 40px;
+        @include responsive(phone-port-sm) {
+          margin-top: 25px;
+        }
+      }
+    }
+    .wrapper-block {
+      @include display(flex);
+      justify-content: space-between;
+      @include responsive(tablet-lg) {
+        flex-direction: column;
+      }
+      .avatar-box {
+        max-width: 360px;
+        width: 100%;
+        @include responsive(tablet-lg) {
+          max-width: 320px;
+        }
+        @include responsive(phone-land-md) {
+          max-width: 100%;
+        }
+        .avatar {
+          margin-bottom: 20px;
+          @include responsive(tablet-lg) {
+            margin-bottom: 10px;
+          }
+          @include responsive(phone-port-sm) {
+            margin-bottom: 5px;
+          }
+        }
+        p {
+          @include text-property(24px, $roboto, $black, none);
+          font-weight: $bold;
+          line-height: 34px;
+          @include responsive(phone-port-sm) {
+            font-size: 22px;
+            line-height: 30px;
+          }
+        }
+      }
+      .article-box {
+        @include display(flex);
+        @include responsive(tablet-lg) {
+          justify-content: space-between;
+          margin-top: 30px;
+        }
+        @include responsive(phone-land-md) {
+          flex-direction: column;
+          margin-top: 15px;
+        }
+        p {
+          @include text-property(14px, $roboto, $grey3, none);
+          font-weight: $regular;
+          line-height: 26px;
+          max-width: 360px;
+          width: 100%;
+          @include responsive(tablet-lg) {
+            max-width: 350px;
+          }
+          @include responsive(tablet) {
+            max-width: 300px;
+          }
+          @include responsive(phone-land-lg) {
+            max-width: 280px;
+          }
+          @include responsive(phone-land-md) {
+            max-width: 100%;
+            margin-bottom: 15px;
+          }
+          @include responsive(phone-port-sm) {
+            margin-bottom: 10px;
+          }
+        }
+        div {
+          margin-left: 40px;
+          @include responsive(phone-land-md) {
+            margin-left: 0;
+          }
+          p {
+            margin-bottom: 20px;
+            @include responsive(phone-port-sm) {
+              margin-bottom: 15px;
+            }
+          }
+          .time {
+            @extend %timerDiv;
+            margin-left: 0;
+            .bx-time-five {
+              @extend %timerIcon;
+            }
+            span {
+              @extend %timeAgo;
+            }
+          }
+        }
+      }
+    }
+  }
+}

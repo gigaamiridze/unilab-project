@@ -1,0 +1,27 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@import "./base/reset";
+@import "./basic/fonts";
+@import "./modules/variables";
+@import "./modules/classes";
+@import "./modules/mixins";
+
+// First page scss files
+@import "./main/first_page/header";
+@import "./main/first_page/first_section";
+@import "./main/first_page/second_section";
+@import "./main/first_page/third_section";
+@import "./main/first_page/footer";
+
+// Second page scss files
+@import "./main/second_page/first_section";
+@import "./main/second_page/second_section";
+@import "./main/second_page/third_section";
+@import "./main/second_page/fourth_section";
+
+// Third page scss file
+@import "./main/third_page/product";
+
+// Breakpoints file for responsive
+@import "./main/breakpoints";

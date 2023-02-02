@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url"                content="https://justtfelix.github.io/Unilab-Project/" />
+    <meta property="og:type"               content="Article" />
+    <meta property="og:title"              content="Unilab Project" />
+    <meta property="og:description"        content="Unilab's first stage assignment" />
+    <meta property="og:image"              content="https://justtfelix.github.io/Unilab-Project/images/travel.svg" />
+    <meta name="keywords" content="Travel, Unilab Project, HTML, CSS, SASS, SCSS, JavaScript">
+    <meta name="author" content="justtfelix">
+    <script src="https://kit.fontawesome.com/f235961b72.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/gif" href="./images/earth-icon.png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <title>Unilab Project</title>
+  </head>
+  <body onload="realTimeClock()">
+    <header>
+      <div class="background"></div>
+      <div class="mobile-header">
+        <div class="top-block minus-margin">
+          <div id="clock"></div>
+          <div class="networks-box">
+            <img src="./images/signal.svg" class="network-img" alt="Signal">
+            <img src="./images/wifi.svg" class="network-img" alt="Wifi">
+            <img src="./images/battery.svg" class="network-img" alt="Battery">
+          </div>
+        </div>
+        <div class="bottom-block hidden-on-mobile">
+          <div class="burger-menu">
+            <span class="line"></span>    
+            <span class="line"></span>    
+            <span class="line"></span>
+          </div>
+          <a href="index.html">
+            <h1 class="grey-logo">logo</h1>
+          </a>
+          <img src="./images/girl-avatar.svg" class="girl-avatar" alt="User">
+        </div>
+      </div>
+      <div class="header-container">
+        <a href="index.html">
+          <h1 class="pink-logo">logo</h1>
+        </a>
+        <div class="flex-box">
+          <nav>
+            <ul>
+              <li>
+                <img src="./images/home.svg" class="link-img" alt="Home">
+                <a href="index.html" class="nav-link">home</a>
+              </li>
+              <li>
+                <img src="./images/discover.svg" class="link-img opacity-img" alt="Products">
+                <a href="product.html" class="nav-link opacity">products</a>
+              </li>
+              <li>
+                <img src="./images/photos.svg" class="link-img opacity-img" alt="Photos">
+                <a href="#" class="nav-link opacity">photos</a>
+              </li>
+              <li>
+                <img src="./images/mail.svg" class="link-img opacity-img" alt="Mail">
+                <a href="#" class="nav-link opacity">contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-box">
+            <img src="./images/user.svg" class="user-img" alt="User">
+            <a href="#" class="nav-link opacity">profile</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="bg-color">
+      <div class="address-block">
+        <div class="menu-box">
+          <a href="index.html">
+            <img src="./images/home.svg" class="home" alt="Home">
+          </a>
+          <h3>story</h3>
+          <h3>world news</h3>
+        </div>
+        <a href="index.html">
+          <img src="./images/back-arrow.svg" class="back-arrow" alt="Back Arrow">
+        </a>
+        <div class="filter-box">
+          <img src="./images/filter.svg" class="filter" alt="Filter">
+        </div>
+      </div>
+    </section>
+    <section class="bg-color">
+      <div class="container full-screen">
+        <div class="common-block">
+          <div class="left-box" style="background-image: url(./images/desert.svg);">
+            <div class="text-content">
+              <h2>world news</h2>
+              <p>Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto vidit.</p>
+              <div class="avatar-box">
+                <img src="./images/avatar.svg" class="avatar" alt="User">
+              </div>
+            </div>
+          </div>
+          <div class="right-box">
+            <form class="form">
+              <label for="select-date" class="label">Select a date</label>
+              <select class="form-field" name="select-date" id="select-date" required>
+                <option selected value="select-date">select...</option>
+                <option value="20-june">20 june</option>
+                <option value="7-july">7 july</option>
+                <option value="2-august">2 august</option>
+                <option value="15-september">15 september</option>
+              </select>
+
+              <label for="keyword" class="label">Enter the first keywords</label>
+              <input type="text" class="form-field cursor-text" name="keyword" id="keyword">
+
+              <button type="button" class="search-btn">search</button>
+              <button type="button" class="search-btn">search an event</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-color add-padd">
+      <div class="container">
+        <div class="underline"></div>
+        <div class="wrapper-block">
+          <div class="avatar-box">
+            <img src="./images/avatar.svg" class="avatar" alt="User">
+            <p>Phasellus eu nulla malesuada, luctus diam.</p>
+          </div>
+          <div class="article-box">
+            <p>Dignissim rutrum ridiculus lacinia phasellus torquent ad aliquet, nisi dictum cubilia class habitasse commodo, semper potenti nec ac per egestas. Ac volutpat ullamcorper phasellus montes sollicitudin litora ridiculus mi conubia inceptos euismod odio curabitur, tortor eros porta venenatis facilisis quam blandit in ut lobortis consequat justo. Hac libero quisque tortor </p>
+            <div>
+              <p>Nascetur himenaeos morbi gravida porta sapien justo aliquam pellentesque dapibus curae, cursus ultrices suspendisse cras ligula id aenean vulputate taciti, eleifend eros bibendum scelerisque lobortis venenatis nulla tristique tempus. Quisque eleifend vulputate.</p>
+              <div class="time">
+                <i class='bx bx-time-five'></i>
+                <span>2 min ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="underline"></div>
+      </div>
+    </section>
+    <section class="bg-color add-padd-bott">
+      <div class="container">
+        <img src="./images/elephant-lg.svg" class="elephant-img" alt="Elephant">
+        <div class="paragraph-box">
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sodales primis, mollis viverra conubia ligula inceptos laoreet libero tortor, nascetur non habitasse iaculis tempor nec egestas fames augue, platea porta integer nostra curae sed arcu. Nec ut diam vulputate ante scelerisque ridiculus lobortis orci mi curae himenaeos quis, senectus curabitur ullamcorper a porttitor nibh fermentum nisi cum morbi aliquam. Vitae pretium vestibulum dui gravida in potenti interdum, class rhoncus neque eget magna at</p>
+          <p>Ullamcorper porttitor non pharetra cursus nisl mollis pellentesque primis penatibus platea, dictum himenaeos eget mi bibendum ad molestie aliquet curae quis quisque, nunc duis ac at elementum dui integer viverra tempus. Lacinia bibendum diam senectus egestas nec molestie convallis aenean hac tempus, vivamus purus congue euismod fringilla cursus donec est eu blandit platea, feugiat vitae netus orci habitant accumsan placerat morbi nostra.</p>
+        </div>
+        <p class="tablet-paragraph" >In hac habitasse platea dictumst. Sed nec venenatis odio. Nulla faucibus ipsum sed faucibus accumsan. Donec rhoncus luctus.</p>
+        <div class="underline"></div>
+        <div class="numbers-box">
+          <span class="queue-num">01</span>
+          <span class="queue-num">02</span>
+          <span class="queue-num">03</span>
+          <span class="queue-num">04</span>
+          <span class="queue-num">05</span>
+          <span class="queue-num">06</span>
+          <div class="multipoint">
+            <span class="point"></span>
+            <span class="point"></span>
+            <span class="point"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="flex-block">
+          <div class="left-box">
+            <a href="index.html" class="footer-logo">logo</a>
+            <div class="links-box">
+              <div class="links">
+                <a href="#">home</a>
+                <a href="#">discovery</a>
+                <a href="#">photos</a>
+                <a href="#">contact</a>
+              </div>
+              <div class="links">
+                <a href="#">about</a>
+                <a href="#">help</a>
+                <a href="#">terms</a>
+                <a href="#">guidlines</a>
+              </div>
+              <div class="links">
+                <a href="#">testimonials</a>
+                <a href="#">advertise</a>
+                <a href="#">integrations</a>
+                <a href="#">careers</a>
+              </div>
+            </div>
+          </div>
+          <div class="right-box">
+            <div class="input-box">
+              <form>
+                <input type="email" class="input-field" placeholder="email" required>
+                <button class="btn" type="submit">
+                  <i class="fa-solid fa-paper-plane send-icon"></i>
+                </button>
+              </form>
+              <p>Stay in touch with us for the freshest products!</p>
+            </div>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-instagram soc-icon"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fa-brands fa-twitter soc-icon"></i>
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <i class="fa-brands fa-facebook-f soc-icon"></i>
+              </a>
+              <a href="https://www.world.com/" target="_blank">
+                <i class="fa-solid fa-earth-americas soc-icon"></i>
+              </a>          
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/clock.js"></script>
+    <script src="./js/burger-menu.js"></script>
+  </body>
+</html>

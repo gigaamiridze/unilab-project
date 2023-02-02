@@ -1,0 +1,105 @@
+@import "../../modules/variables";
+@import "../../modules/classes";
+@import "../../modules/mixins";
+@import "../breakpoints";
+
+section {
+  .container {
+    @extend %container;
+    .head-title {
+      @include text-property(40px, $roboto, $black, $capit);
+      font-weight: $bold;
+      text-align: center;
+      padding: 40px 0;
+      @include responsive(phone-land-sm) {
+        font-size: 38px;
+        padding: 30px 0;
+      }
+      @include responsive(phone-port-md) {
+        font-size: 32px;
+        padding: 25px 0;
+      }
+      @include responsive(phone-port-sm) {
+        font-size: 26px;
+        padding: 20px 0;
+      }
+    }
+    #cards {
+      @include display(flex);
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include responsive(tablet) {
+        flex-direction: column;
+      }
+      .card {
+        width: 31%;
+        box-shadow: 0 0 4px 4px $pink;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 35px;
+        @include responsive(tablet) {
+          width: 100%;
+        }
+        @include responsive(phone-land-sm) {
+          margin-bottom: 30px;
+        }
+        @include responsive(phone-port-md) {
+          padding: 15px;
+        }
+        @include responsive(phone-port-sm) {
+          margin-bottom: 25px;
+        }
+        .title {
+          @include text-property(20px, $roboto, $black, $capit);
+          font-weight: $bold;
+          line-height: 25px;
+          @include responsive(phone-port-md) {
+            font-size: 18px;
+          }
+          @include responsive(phone-port-sm) {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+        .image {
+          width: 80%;
+          object-fit: cover;
+          margin: 20px 0;
+          @include responsive(tablet) {
+            width: 35%;
+          }
+          @include responsive(phone-land-sm) {
+            margin: 15px 0;
+          }
+          @include responsive(phone-port-md) {
+            margin: 10px 0;
+          }
+        }
+        .description {
+          @include text-property(15px, $roboto, $black, none);
+          line-height: 22px;
+          @include responsive(phone-port-md) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+        .category {
+          margin: 15px 0;
+          @include responsive(phone-land-sm) {
+            margin: 10px 0;
+          }
+          @include responsive(phone-port-sm) {
+            margin: 5px 0;
+          }
+        }
+        .category, .price {
+          @include text-property(15px, $roboto, $black, $capit);
+          font-weight: $bold;
+          @include responsive(phone-port-sm) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

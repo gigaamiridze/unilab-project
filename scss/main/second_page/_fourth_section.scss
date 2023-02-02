@@ -1,0 +1,133 @@
+@import "../../modules/variables";
+@import "../../modules/classes";
+@import "../../modules/mixins";
+@import "../breakpoints";
+
+.add-padd-bott {
+  padding-bottom: 150px;
+  @include responsive(tablet) {
+    padding-bottom: 80px;
+  }
+  @include responsive(phone-land-sm) {
+    padding-bottom: 40px;
+  }
+  @include responsive(phone-port-sm) {
+    padding-bottom: 30px;
+  }
+  .container {
+    @extend %container;
+    .elephant-img {
+      width: 100%;
+      object-fit: cover;
+      @include responsive(phone-land-sm) {
+        height: 220px;
+        border-radius: 6px;
+      }
+      @include responsive(phone-port-md) {
+        height: 180px;
+      }
+    }
+    .paragraph-box {
+      max-width: 760px;
+      width: 100%;
+      p {
+        @include text-property(14px, $roboto, $grey3, none);
+        font-weight: $regular;
+        line-height: 24px;
+        &:first-child {
+          margin: 40px 0 30px 0;
+          @include responsive(phone-land-sm) {
+            margin: 25px 0 20px 0;
+          }
+          @include responsive(phone-port-sm) {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+    .tablet-paragraph {
+      @include text-property(16px, $roboto, $black, none);
+      line-height: 25px;
+      display: none;
+      @include responsive(tablet) {
+        display: block;
+        margin-top: 40px;
+      }
+      @include responsive(phone-land-sm) {
+        margin-top: 20px;
+      }
+      @include responsive(phone-port-sm) {
+        font-size: 14px;
+        margin-top: 15px;
+      }
+    }
+    .underline {
+      @extend %line;
+      margin-top: 40px;
+      @include responsive(phone-port-sm) {
+        margin-top: 25px;
+      }
+    }
+    .numbers-box {
+      @include display(flex);
+      justify-content: center;
+      height: 25px;
+      display: none;
+      @include responsive(tablet) {
+        display: block;
+        @include display(flex);
+        margin-top: 40px;
+      }
+      @include responsive(phone-port-sm) {
+        margin-top: 30px;
+      }
+      .queue-num {
+        @include text-property(14px, $roboto, $grey3, none);
+        font-weight: $regular;
+        margin-right: 25px;
+        position: relative;
+        cursor: pointer;
+        @include transition(all, 350ms, ease);
+        &:after {
+          @extend %pinkLine;
+          @include transition(all, 350ms, ease);
+          opacity: 0%;
+        }
+        &:first-child {
+          color: $black;
+          font-weight: $bold;
+          &:after {
+            opacity: 100%;
+          }
+        }
+        &:hover {
+          color: $black;
+          font-weight: $bold;
+          &:after {
+            opacity: 100%;
+          }
+        }
+        @include responsive(phone-port-sm) {
+          margin-right: 15px;
+        }
+      }
+      .multipoint {
+        @include display(flex);
+        align-items: center;
+        width: auto;
+        height: 16px;
+        cursor: pointer;
+        .point {
+          width: 4px;
+          height: 4px;
+          background-color: $black;
+          display: block;
+          border-radius: 50%;
+          &:nth-child(2) {
+            margin: 0 3px; 
+          }
+        }
+      }
+    }
+  }
+}
